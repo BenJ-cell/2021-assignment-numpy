@@ -15,7 +15,6 @@ errors by calling `flake8` at the root of the repo.
 import numpy as np
 
 def max_index(X):
-   
     """Return the index of the maximum in a numpy array.
     Parameters
     ----------
@@ -63,7 +62,7 @@ def wallis_product(n_terms):
     if (n_terms < 0) or (type(n_terms) != int):
         raise ValueError("Number of terms negative/ Not an Integer")
     elif (n_terms == 0):
-        return 2 
+        return 2
     elif (type(n_terms) == int):
         A = 1
         for i in range(1, n_terms+1):
