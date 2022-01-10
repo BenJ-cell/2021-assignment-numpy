@@ -17,10 +17,9 @@ import numpy as np
 
 
 def max_index(X):
-    """**summary line**
-    **description starts after blank line above**
-    Return the index of the maximum in a numpy array.
+    """Return the index of the maximum in a numpy array.
     Parameters
+    
     ----------
     X : ndarray of shape (n_samples, n_features)
         The input array.
@@ -48,12 +47,11 @@ def max_index(X):
 
 
 def wallis_product(n_terms):
-    """**summary line**
-    **description starts after blank line above**
-    Implement the Wallis product to compute an approximation of pi.
+    """Implement the Wallis product to compute an approximation of pi.
     See:
     https://en.wikipedia.org/wiki/Wallis_product
     Parameters
+    
     ----------
     n_terms : int
         Number of steps in the Wallis product. Note that `n_terms=0` will
