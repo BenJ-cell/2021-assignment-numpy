@@ -35,13 +35,12 @@ def max_index(X):
 
     # TODO
     # Get the indices of one the maximum element in numpy array
-    if ((len(np.shape(X) != 2) or (not isinstance(X, np.ndarray))):
-        raise ValueError()
-    
-    n_samples, n_features = np.shape(X)
+    if type(X) != np.ndarray:
+        raise ValueError("The input must be a numpy array")
+    if len(X.shape) != 2:
+        raise ValueError("The input must be a 2D-numpy array")
      
-    i = np.argmax(X)//n_features
-    j = np.argmax(X)%n_samples
+    i, j = np.unravel_index(np.argmax(X, axis=None), X.shape)
    
     return i, j
 
