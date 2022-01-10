@@ -62,9 +62,9 @@ def wallis_product(n_terms):
     if (n_terms < 0) or (type(n_terms)!=int):
         raise ValueError("Number of terms negative/ Not an Integer")
     elif (n_terms == 0):
-      return 2 
+        return 2 
     elif (type(n_terms) == int):
-      A = 1
-      for i in range(1, n_terms+1):
-        A = A*((4*(i**2))/(4*(i**2) - 1))
-      return 2*A
+        A = 1
+        for i in range(1, n_terms+1):
+            A = A*((4*(i**2))/(4*(i**2) - 1))
+        return 2*A
