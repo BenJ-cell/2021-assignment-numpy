@@ -15,6 +15,7 @@ errors by calling `flake8` at the root of the repo.
 import numpy as np
 
 def max_index(X):
+   
     """Return the index of the maximum in a numpy array.
     Parameters
     ----------
@@ -68,4 +69,3 @@ def wallis_product(n_terms):
         for i in range(1, n_terms+1):
             A = A*((4*(i**2))/(4*(i**2) - 1))
         return 2*A
-
