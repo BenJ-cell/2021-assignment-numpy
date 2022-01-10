@@ -32,20 +32,17 @@ def max_index(X):
     """
     i = 0
     j = 0
-    max = 0
 
     # TODO
     # Get the indices of one the maximum element in numpy array
-    if len(np.shape(X)) != 2:
-        raise ValueError
+    if (len(X.shape) != 2) or (not isinstance(X, np.ndarray)):
+        raise ValueError()
+    
     n_samples, n_features = np.shape(X)
-    for k in range(n_samples):
-      for q in range(n_features):
-        if (X[k][q]>max):
-          max = X[k][q]
-          i, j = k, q
-        else :
-          None
+     
+    i = np.argmax(X)//n_features
+    j = np.argmax(X)%n_samples
+   
     return i, j
 
 
@@ -67,9 +64,9 @@ def wallis_product(n_terms):
     # terms in the pr
     if (n_terms < 0) or (type(n_terms)!=int):
         raise ValueError("Number of terms negative/ Not an Integer")
-    elif (n_terms==0):
+    elif (n_terms == 0):
       return 2 
-    elif (type(n_terms)==int) :
+    elif (type(n_terms) == int) :
       A = 1
       for i in range(1, n_terms+1):
         A = A*((4*(i**2))/(4*(i**2) - 1))
