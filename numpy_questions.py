@@ -59,6 +59,7 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the pr
+    
     if (n_terms < 0) or (type(n_terms) != int):
         raise ValueError("Number of terms negative/ Not an Integer")
     elif (n_terms == 0):
