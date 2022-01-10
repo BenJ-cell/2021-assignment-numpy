@@ -35,7 +35,7 @@ def max_index(X):
 
     # TODO
     # Get the indices of one the maximum element in numpy array
-    if (len(X.shape) != 2) or (not isinstance(X, np.ndarray)):
+    if (len(np.shape(X) != 2) or (not isinstance(X, np.ndarray)):
         raise ValueError()
     
     n_samples, n_features = np.shape(X)
