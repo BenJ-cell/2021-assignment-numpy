@@ -59,8 +59,6 @@ def wallis_product(n_terms):
     pi : float
         The approximation of order `n_terms` of pi using the Wallis product.
     """
-    # XXX : The n_terms is an int that corresponds to the number of
-    # terms in the product
     if (n_terms < 0) or (type(n_terms) != int):
         raise ValueError("Number of terms negative/ Not an Integer")
     elif (n_terms == 0):
